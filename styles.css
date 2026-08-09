@@ -341,3 +341,26 @@ footer {
   .hero { padding-top: 42px; }
   .community { padding-inline: 22px; }
 }
+.steps {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: yerrr-step;
+}
+
+.steps li {
+  counter-increment: yerrr-step;
+  margin: 12px 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
+  background: rgba(255,255,255,.05);
+  text-align: left;
+}
+
+.steps li::before {
+  content: counter(yerrr-step);
+  font-weight: 800;
+  margin-right: 12px;
+}
